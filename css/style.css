@@ -1,0 +1,132 @@
+
+html,
+body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+#wrapper {
+	min-height:100%;
+	position:relative;
+	background:#EAE5E5;
+}
+#header {
+	background:#EAE5E5;
+	padding:10px;
+	
+}
+#content {
+	padding-bottom:100px;
+	background:#EAE5E5;
+	
+}
+#footer {
+	background:#3A59AA;
+	width:100%;
+	height:100px;
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+
+.footerElement {
+	color: white;
+	float: left;
+	margin-left: 10%;
+	
+}
+
+.glyphicon {
+	float: left;
+	margin-right: 5px;
+}
+
+#three {
+	width: 200px;
+	margin-top: 5px;
+}
+
+img {
+	width: 50px;
+}
+
+#four {
+	width: 300px;
+	margin-top: 30px;
+	margin-left: 7.5%;
+}
+
+#one, #two {
+	margin-top: 20px;
+}
+
+p {
+	font-family: 'Fira Sans';
+}
+
+#title {
+	margin-left: 20%;
+}
+
+#links {
+	margin-right: 20%;
+}
+
+li {
+	font-size: 25px;
+	font-style: italic;
+	margin-top: 10%;
+}
+
+#mainPic {
+	margin-left: 20%;
+	margin-top: 5%;
+	height: 300px;
+	width: 300px;
+}
+
+#intro {
+	float: right;
+	margin-right: 30%;
+	font-style: italic;
+	
+}
+
+#circle1 {
+	position: absolute;
+	width: 250px;
+	left: 650px;
+	bottom: 250px;;
+	
+}
+
+#circle1:hover {
+	-webkit-filter: drop-shadow(10px 10px 10px blue); /* Chrome, Safari, Opera */
+    filter: drop-shadow(10px 10px 10px blue);
+}
+
+#circle2:hover {
+	-webkit-filter: drop-shadow(10px 10px 10px red); /* Chrome, Safari, Opera */
+    filter: drop-shadow(10px 10px 10px red);
+}
+
+#circle3:hover {
+	-webkit-filter: drop-shadow(10px 10px 10px yellow); /* Chrome, Safari, Opera */
+    filter: drop-shadow(10px 10px 10px yellow);
+}
+
+#circle2 {
+	position: absolute;
+	width: 250px;
+	left: 850px;
+	bottom: 250px;;
+	
+}
+
+#circle3 {
+	position: absolute;
+	width: 250px;
+	left: 1050px;
+	bottom: 250px;;
+	
+}
