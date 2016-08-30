@@ -8,12 +8,12 @@
 
 div {position:absolute; width:500px; height:500px;}
 
-
 #right_side {left:50%; border-left:1px solid black;}
 
 img {position:absolute;}
 
 h1, p{text-align:center;}
+
 </style>
 
 </head>
@@ -79,15 +79,18 @@ function generateFaces() {
 		theLeftSide.lastChild.onclick=function nextLevel(event){
 		event.stopPropagation();
 		numberOfFaces +=5;
-		generateFaces();}
+		generateFaces();
+	}
 		
 		
-		}
+}
 		
 		
-		theBody.onclick = function gameOver() {alert("Game Over!");
+	theBody.onclick = function gameOver() {
+		alert("Game Over!");
 		theBody.onclick = null;
-		theLeftSide.lastChild.onclick = null;};
+		theLeftSide.lastChild.onclick = null;
+	};
 		
 		
 		
