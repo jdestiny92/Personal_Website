@@ -15,6 +15,22 @@ app.use(bodyParser.urlencoded({
 
 app.set('view engine', 'handlebars');
 
+app.get('/', function(req, res){
+	res.render('index');
+})
+
+app.get('/portfolio', function(req, res){
+	res.render('portfolio');
+})
+
+app.get('/contact', function(req, res){
+	res.render('contact');
+})
+
+app.get('/testomonial', function(req, res){
+	res.render('testomonial');
+})
+
 var port = 3000;
 
 app.listen(port);

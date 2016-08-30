@@ -5,14 +5,17 @@
 
   }
   
-  #mycarousel {position:relative; width:70%; margin:auto; margin-bottom:30px;}
+  #mycarousel {
+  	position:relative; width:70%; margin:auto; margin-bottom:30px;
+  }
 
-  .item{background-color:#00ffff;}
+  .item{
+  	background-color:#00ffff;
+  }
 
 
  
-html,
-body {
+html,body {
 	margin:0;
 	padding:0;
 	height:100%;
