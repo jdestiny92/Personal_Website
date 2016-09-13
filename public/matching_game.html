@@ -12,37 +12,65 @@ div {position:absolute; width:500px; height:500px;}
 
 img {position:absolute;}
 
-h1, p{text-align:center;}
+#center{
+	display: inline;
+	margin-left: 30%;
+}
+
+p {
+	text-align: center;
+}
+
+#left {
+	display: inline;
+}	
+
+#right {
+	display: inline;
+	margin-left: 20%;
+}
 
 </style>
 
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
 </head>
 
 <body onload="generateFaces()">
+<h1 id="left">Your Score: <span id="now">0</span></h1>
+<h1 id="center">Instructions:</h1>
+<h1 id="right">Top Score: <span id="top"></span></h1>
 
-<h1>Instructions:</h1>
-
-<p>Click on the extra smiling face on the left</p>
+<p>Click on the <b>EXTRA</b> smiling face on the left</p>
 
 <div id="left_side"> </div>
 
 <div id="right_side"> </div>
 
 <script>
-
+var total = 0;
 var numberOfFaces = 5;
 var theLeftSide = document.getElementById("left_side");
 var theRightSide = document.getElementById("right_side");
 var theBody = document.getElementsByTagName("body")[0];
 
+var ref = new Firebase('https://matchinggame.firebaseio.com/');
+ref.once('value', function(snapshot){
+	var score = snapshot.child('score');
+	score = score.val();
+	$('#top').append(score);
+})
 
 
 function generateFaces() {
 
 	while(theLeftSide.firstChild) {
-		theLeftSide.removeChild(theLeftSide.firstChild);};
+		theLeftSide.removeChild(theLeftSide.firstChild);
+	};
+
 	while(theRightSide.firstChild) {
-		theRightSide.removeChild(theRightSide.firstChild);};
+		theRightSide.removeChild(theRightSide.firstChild);
+	};
 
 	
 
@@ -60,11 +88,10 @@ function generateFaces() {
 	img_smile.style.top = top_position + "px";
 	
 	theLeftSide.appendChild(img_smile);
-	
 		
 	}
+
 	leftSideImages = theLeftSide.cloneNode(true);
-	
 	
 	var last_child_2 = leftSideImages.lastChild;
 	
@@ -72,29 +99,35 @@ function generateFaces() {
 	
 	theRightSide.appendChild(leftSideImages); 
 
-	
-		
-		
-		
-		theLeftSide.lastChild.onclick=function nextLevel(event){
+	theLeftSide.lastChild.onclick = function nextLevel(event){
+		total = total+=10;
+		$('#now').text(total);
 		event.stopPropagation();
 		numberOfFaces +=5;
 		generateFaces();
 	}
-		
-		
+				
 }
 		
 		
-	theBody.onclick = function gameOver() {
-		alert("Game Over!");
-		theBody.onclick = null;
-		theLeftSide.lastChild.onclick = null;
-	};
-		
-		
-		
+theBody.onclick = function gameOver() {
+	theBody.onclick = null;
+	theLeftSide.lastChild.onclick = null;
 
+	ref.once('value', function(snapshot){
+		var score = snapshot.child('score');
+		score = score.val();
+		if(total > score){
+			ref.child('score').set(total);
+			alert('Game Over! Congratulations, you have the new high score!');
+		}
+		else{
+			alert('Game Over!');
+		}
+	})
+
+};
+		
 </script>
 
 </body>
