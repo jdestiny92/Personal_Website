@@ -102,8 +102,8 @@ li {
 #circle1 {
 	position: absolute;
 	width: 250px;
-	left: 650px;
-	bottom: 250px;;
+	left: 48%;
+	bottom: 33%;
 	
 }
 
@@ -125,16 +125,16 @@ li {
 #circle2 {
 	position: absolute;
 	width: 250px;
-	left: 850px;
-	bottom: 250px;;
+	left: 61%;
+	bottom: 33%;
 	
 }
 
 #circle3 {
 	position: absolute;
 	width: 250px;
-	left: 1050px;
-	bottom: 250px;;
+	left: 74%;
+	bottom: 33%;
 	
 }
 
@@ -182,4 +182,13 @@ li {
 
 .carousel-control.left:hover, .carousel-control.right:hover {
     opacity: 0;
+}
+
+.popover-content {
+	color: black;
+}
+
+.popover-title {
+	color: black;
+	font-weight: bold;
 }
