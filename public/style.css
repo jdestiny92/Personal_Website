@@ -101,9 +101,9 @@ li {
 
 #circle1 {
 	position: absolute;
-	width: 250px;
-	left: 48%;
-	bottom: 33%;
+	width: 18vw;
+	left: 48vw;
+	bottom: 33vh;
 	
 }
 
@@ -124,17 +124,17 @@ li {
 
 #circle2 {
 	position: absolute;
-	width: 250px;
-	left: 61%;
-	bottom: 33%;
+	width: 18vw;
+	left: 61vw;
+	bottom: 33vh;
 	
 }
 
 #circle3 {
 	position: absolute;
-	width: 250px;
-	left: 74%;
-	bottom: 33%;
+	width: 18vw;
+	left: 74vw;
+	bottom: 33vh;
 	
 }
 
