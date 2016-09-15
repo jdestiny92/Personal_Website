@@ -3,27 +3,28 @@ html,
 body {
 	margin:0;
 	padding:0;
-	height:100%;
+	height:100vh;
 }
 #wrapper {
-	min-height:100%;
+	min-height:100vh;
 	position:relative;
 	background:#EAE5E5;
 }
+
 #header {
 	background:#EAE5E5;
 	padding:10px;
 	
 }
 #content {
-	padding-bottom:100px;
+	padding-bottom:14.2vh;
 	background:#EAE5E5;
 	
 }
 #footer {
 	background:#3A59AA;
-	width:100%;
-	height:100px;
+	width:100vw;
+	height:14.2vh;
 	position:absolute;
 	bottom:0;
 	left:0;
@@ -32,7 +33,7 @@ body {
 .footerElement {
 	color: white;
 	float: left;
-	margin-left: 10%;
+	margin-left: 10vw;
 	
 }
 
@@ -42,22 +43,22 @@ body {
 }
 
 #three {
-	width: 200px;
+	width: 14.6vw;
 	margin-top: 5px;
 }
 
 img {
-	width: 50px;
+	width: 3.7vw;
 }
 
 #four {
-	width: 300px;
-	margin-top: 30px;
-	margin-left: 7.5%;
+	width: 22vw;
+	margin-top: 4.2vh;
+	margin-left: 7.5vw;
 }
 
 #one, #two {
-	margin-top: 20px;
+	margin-top: 2.8vh;
 }
 
 p {
@@ -65,11 +66,11 @@ p {
 }
 
 #title {
-	margin-left: 20%;
+	margin-left: 20vw;
 }
 
 #links {
-	margin-right: 10%;
+	margin-right: 10vw;
 }
 
 li {
@@ -79,22 +80,22 @@ li {
 }
 
 #contact {
-	width: 500px;
-	margin-left: 400px;
-	margin-top: 90px;
+	width: 36.6vw;
+	margin-left: 29.3vw;
+	margin-top: 12.8vh;
 }
 
 
 #mainPic {
-	margin-left: 20%;
-	margin-top: 5%;
-	height: 300px;
-	width: 300px;
+	margin-left: 20vw;
+	margin-top: 9vh;
+	height: 42.5vh;
+	width: 22vw;
 }
 
 #intro {
 	float: right;
-	margin-right: 30%;
+	margin-right: 30vw;
 	font-style: italic;
 	
 }
@@ -146,7 +147,7 @@ li {
   }
   
   #mycarousel {
-  	position:relative; width:70%; margin:auto; margin-bottom:30px;
+  	position:relative; width:70vw; margin:auto; margin-bottom:4.2vh;
   }
 
   .item{
