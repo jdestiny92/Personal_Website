@@ -8,109 +8,8 @@
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
-  <style>
-  body {
-      font: 20px;
-      font-family: 'Fira Sans';
-      line-height: 1.8;
-      color: #f5f6f7;
-  }
-
-  p {font-size: 16px;}
-
-  .margin {margin-bottom: 45px;}
-
-  .bg-1 {
-      background-color: #EAE5E5; /* Grey */
-      color: black;
-  }
-  .bg-2 {
-      background-color: #474e5d; /* Dark Blue */
-      color: #ffffff;
-  }
-  .bg-3 {
-      background-color: #ffffff; /* White */
-      color: #555555;
-  }
-  .bg-4 {
-      background-color: #2f2f2f; /* Black Gray */
-      color: #fff;
-  }
-  .container-fluid {
-      padding-top: 70px;
-      padding-bottom: 70px;
-  }
-  .navbar {
-      padding-top: 15px;
-      padding-bottom: 15px;
-      border: 0;
-      border-radius: 0;
-      margin-bottom: 0;
-      font-size: 12px;
-      letter-spacing: 5px;
-  }
-
-  .navbar-nav  li a:hover {
-      color: #1abc9c !important;
-  }
+  <link rel="stylesheet" type="text/css" href="style.css">
   
-  .pic{
-    width: 7vw;
-  }
-
-  .img-responsive{
-    margin: auto;
-  }
-  .carousel-control{
-    opacity: .5;
-  }
-
-  section {
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-
-.quote {
-    color: rgba(0,0,0,.1);
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-#fade-quote-carousel.carousel {
-  padding-bottom: 60px;
-}
-#fade-quote-carousel.carousel .carousel-inner .item {
-  opacity: 0;
-  -webkit-transition-property: opacity;
-      -ms-transition-property: opacity;
-          transition-property: opacity;
-}
-#fade-quote-carousel.carousel .carousel-inner .active {
-  opacity: 1;
-  -webkit-transition-property: opacity;
-      -ms-transition-property: opacity;
-          transition-property: opacity;
-}
-#fade-quote-carousel.carousel .carousel-indicators {
-  bottom: 10px;
-}
-#fade-quote-carousel.carousel .carousel-indicators > li {
-  background-color: #e84a64;
-  border: none;
-}
-#fade-quote-carousel blockquote {
-    text-align: center;
-    border: none;
-}
-#fade-quote-carousel .profile-circle {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-    border-radius: 100px;
-}
-
-  </style>
 </head>
 <body>
 
@@ -151,7 +50,7 @@
 
 <!-- Portfolio -->
 <div class="container-fluid bg-3 text-center">
-  <h3 class="margin" id="portfolio">Some of My Notable Creations   :</h3>
+  <h3 class="margin" id="portfolio">Some of My Notable Creations:</h3>
     <div class="row row-content"><div class="col-xs-12">
         <div id="mycarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -245,7 +144,7 @@
 <!-- Testomonials -->
 <div class="container-fluid bg-4 text-center">
   <h3 class="margin" id="testomonials">What do People Have to Say?</h3>
-    <section id="carousel">           
+    <div id="carousel">           
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
@@ -283,7 +182,7 @@
       </div>              
     </div>
   </div>
-</section>
+</div>
 </div>
 
 <!-- Contact -->
