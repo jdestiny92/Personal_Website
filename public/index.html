@@ -62,6 +62,9 @@
   	<li>MongoDB</li>
   	<li>Express Js</li>
   	<li>Handlebars Js</li>
+  	<li>Sequelize</li>
+  	<li>Java</li>
+  	<li>Android Studio IDE</li>
   </ul>
   </p>
 </div>
@@ -237,7 +240,7 @@
   <div class="form-group">
     <label for="Message" class="col-sm-2 control-label" style="color: black;">Message</label>
     <div class="col-sm-10">
-      <textarea style="width:100%; color: black;" id="message"></textarea>
+      <textarea style="width:100%; color: black;" id="textMessage"></textarea>
     </div>
   </div>
 </form>
@@ -271,7 +274,7 @@
 
        <div class="footerElement" style="margin-top: 2vh">
       <b><u>Resume</u></b>
-       <div><a target="_blank" href="https://docs.google.com/document/d/12jwZF1KVkoe1UKNB-JGxxeBN1a6vcBnRuqGPUuNxxdc/edit?usp=sharing"><img src="https://cdn3.iconfinder.com/data/icons/musthave/128/Copy%20v2.png" class="pic"></a>
+       <div><a target="_blank" href="https://docs.google.com/document/d/1cA7nlZwU6usKTL-8LNkY6AOmyQy0_ZQQaI7whtQDbIw/edit?usp=sharing"><img src="https://cdn3.iconfinder.com/data/icons/musthave/128/Copy%20v2.png" class="pic"></a>
        </div>
       </div>
 </footer>
@@ -286,7 +289,9 @@
 
         var name = $('#name').val();
         var email = $('#email').val();
-        var message = $('#message').val();
+        var message = $('#textMessage').val();
+
+        console.log(message);
 
        $.ajax({
         type: "POST",
@@ -300,8 +305,8 @@
           email: email,
           message: message
         },
-        success: function () {
-
+        success: function (data) {
+        	console.log(data);
         }
     })
   })

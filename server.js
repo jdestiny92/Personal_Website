@@ -14,40 +14,43 @@ app.get('/', function(req, res){
 })
 
 app.post('/mail', function(req, res){
-	//console.log(req.body);
+	
 	var name = req.body.name;
 	var email = req.body.email;
 	var message = req.body.message;
 
 	var transporter = nodemailer.createTransport({
-        service: 'Gmail',
-        auth: {
-            user: 'theicyreview@gmail.com', // Your email id
-            pass: 'kcdnsyuwwrzllpvl' // Your password
-        }
-    });
+                    service: 'Gmail',
+                    auth: {
+                        user: 'theicyreview@gmail.com', // Your email id
+                        pass: 'kcdnsyuwwrzllpvl' // Your password
+                    }
+                });
+
 
     var mailOptions = {
-    from: 'theicyreview@gmail.com', // sender address
-    to: 'jbiebelberg@gmail.com', // list of receivers
-    subject: 'Email From Website', // Subject line
-    text: (message + "\r\n" + ' Contact email address is: ' + email + "\r\n" + 'Message sent from: ' + name) 
-};
+        from: 'theicyreview@gmail.com', // sender address
+        to: 'jbiebelberg@gmail.com', // list of receivers
+        subject: 'Email From Website', // Subject line
+        text: (message + "\r\n" + "\r\n" + ' Contact email address is: ' + email + "\r\n" + "\r\n" + 'Message sent from: ' + name) 
+    };
+
 
 transporter.sendMail(mailOptions, function(error, info){
     if(error){
-        //console.log(error);
-        res.json({yo: 'error'});
+        res.json({message: 'error'});
     }
     else{
-        //console.log('Message sent: ' + info.response);
-        res.json({yo: info.response});
+       
+        res.json({message: 'message sent successfully!'});
     };
 });
 
-	//res.json(req.body);
+	
 })
 
 var port = process.env.PORT || 3000;
 
-app.listen(port);
+app.listen(port, function(){
+    console.log('Listening on port: ' + port);
+});
